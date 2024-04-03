@@ -24,7 +24,8 @@ class Solution:
 
 # tabulation - skip
 
-# full dp approach
+# full dp approach - bottom up
+# base case -> solution 
 class Solution:
     def climbStairs(self, n: int) -> int:
         a, b = 0, 1
