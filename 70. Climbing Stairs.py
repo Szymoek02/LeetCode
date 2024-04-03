@@ -22,9 +22,18 @@ class Solution:
 
         return memo[n]
 
-# tabulation - skip
+# tabulation
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        if n == 1: return 1
+        dp = [1, 2]
+        for i in range(2, n):
+            dp.append(dp[i - 2] + dp[i - 1])
 
-# full dp approach - bottom up
+        return dp[-1]
+
+
+# full dp approach optimized - bottom up
 # base case -> solution 
 class Solution:
     def climbStairs(self, n: int) -> int:
