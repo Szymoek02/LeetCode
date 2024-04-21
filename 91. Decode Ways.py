@@ -40,6 +40,34 @@ class Solution:
                 dp[i] += dp[i - 2]
 
         return dp[n]
+
+# Full dynamic programming - constans space
+class Solution:
+    def numDecodings(self, s: str) -> int:
+        if not s or s[0] == '0':
+            return 0
+        n = len(s)
+        a = b = 1
+
+        for i in range(2, n + 1):
+            digit1 = int(s[i - 1])
+            digit2 = int(s[i - 2: i])
+            res = 0
+            if 1 <= digit1 <= 9:
+                res += b
+
+            if 10 <= digit2 <= 26:
+                res += a
+
+            a = b
+            b = res
+
+        return b
+            
+
+            
+
+        
             
 
             
