@@ -1,6 +1,5 @@
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
-        points = set()
         res = 0
 
         def dfs(x, y):
