@@ -11,7 +11,6 @@ class Solution:
             if s[i] == '0':
                 return
 
-
             bruteforce(i + 1)
             if (i + 1) < len(s) and (s[i] == '1' or (s[i] == '2' and s[i + 1] < '7')):
                 bruteforce(i + 2)
