@@ -12,9 +12,6 @@
 class Solution {
 public:
     TreeNode* construct(vector<int>& preorder, vector<int>& postorder, int& preorder_idx, int& postorder_idx) {
-        if(preorder_idx >= preorder.size() || postorder_idx >= postorder.size())
-            return nullptr;
-
         TreeNode* root = new TreeNode(preorder[preorder_idx++]);
         
         if(root->val != postorder[postorder_idx])
